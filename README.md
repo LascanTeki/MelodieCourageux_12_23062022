@@ -12,9 +12,9 @@ Permettre à l’utilisateur de suivre le nombre de sessions réalisées ainsi q
 
 ## Authors
 
-Product Owner, Charles 
-Lead Developer, Antoine
-Front End Developper, Melodie
+- Product Owner, Charles 
+- Lead Developer, Antoine
+- Front End Developper, Melodie
 
 ## Licensing
 
