@@ -1,0 +1,29 @@
+.side{
+    display: flex;
+    flex-direction: column;
+    width: 117px;
+    background-color: black;
+    height: calc(100vh - 92.9219px);
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+}
+
+.side img{
+    
+height: 64px;
+width: 64px;
+padding-bottom: 20px;
+}
+
+.icons{
+    width: min-content;
+}
+
+.Copyright{
+    color: white;
+    transform: rotate(-0.25turn);
+    width: 100%;
+    font-size: 12px;
+    white-space: nowrap;
+}
