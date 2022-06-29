@@ -1,0 +1,18 @@
+.title{
+    position: absolute;
+    left:224px;
+    top:15.5vh
+}
+
+.name{
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.name span{
+    color: #FF0101;
+}
+
+.subtitle{
+    font-size: 18px;
+}

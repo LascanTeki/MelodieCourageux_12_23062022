@@ -4,18 +4,18 @@ import Lifting from '../Assets/Lifting.png'
 import Medi from '../Assets/Medi.png'
 import Swim from '../Assets/Swim.png'
 
-function Sidebar() {
+function sidebar() {
   return (
     <div className='side'>
       <div className="icons">
-      <img src={Medi} alt="Meditation"/>
-      <img src={Swim} alt="Swimming"/>
-      <img src={Bike} alt="Biking"/>
-      <img src={Lifting} alt="Lifting"/>
+      <a href='#'><img src={Medi} alt="Meditation"/></a>
+      <a href='#'> <img src={Swim} alt="Swimming"/></a>
+      <a href='#'><img src={Bike} alt="Biking"/></a>
+      <a href='#'><img src={Lifting} alt="Lifting"/></a>
       </div>
       <div className='Copyright'>Copiryght, SportSee 2020</div>
     </div>
   );
 }
 
-export default Sidebar;
+export default sidebar;

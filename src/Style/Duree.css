@@ -1,0 +1,50 @@
+
+.recharts-responsive-container{
+    position: absolute;
+    top: 31vh;
+    left: 226px;
+    background-color: #FBFBFB; 
+    border-radius: 5px;
+    color: #8884d8;
+}
+
+.recharts-bar-rectangle{
+    border-radius: 10px;
+}
+
+.recharts-yAxis .recharts-text {
+    transform: translate(50px, 0);
+ }
+
+ .recharts-legend-item{
+    margin-left: 20px;
+ }
+
+ .recharts-xAxis .recharts-text{
+    transform: translate(0, 15px);
+    
+ }
+ .recharts-cartesian-axis-tick-line{
+    display: none;
+ }
+ .recharts-rectangle {
+    width: 7px;
+ }
+
+ .recharts-legend-icon{
+    border-radius: 50%;
+ }
+
+ .recharts-cartesian-grid-vertical{
+    display: none;
+ }
+
+ .recharts-wrapper{
+    width: 785px;
+ }
+
+ .text-color-class{
+   color: #74798C;
+   margin-left: 12px;
+   font-size: 14px;
+ }
