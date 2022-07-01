@@ -1,0 +1,32 @@
+.lower{
+    position: absolute;
+    top: 66vh;
+    left: 226px;
+    height: 25vh;
+    width: 17.9vw;
+    background-color: #FF0000;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.linetitle{
+    font-size: 12px;
+    position: absolute;
+    top: 29px;
+    left: 34px;
+    font-size: 15px;
+    color: rgba(255,255,255,0.5);
+    width: 70%;
+}
+
+.line-tooltip{
+    background-color: white;
+    font-size: 8px;
+    width: 39px;
+    height: 25px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

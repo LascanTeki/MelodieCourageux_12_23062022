@@ -1,0 +1,13 @@
+.center{
+    position: absolute;
+    top: 66vh;
+    left: 514px;
+    height: 25vh;
+    width: 17.9vw;
+    background-color: #282D30;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: lighter;
+}

@@ -67,12 +67,27 @@ const data = [
   },
 ];
 
+
+
+
 export default class Example extends PureComponent {
 
   render() {
 
+    const CustomTooltip = ({ active, payload, label }) => {
+      if (active && payload && payload.length) {
+        return (
+          <div className="custom-tooltip">
+            <p className="label">{`${payload[0].payload.pv}kg`}</p>
+            <p className="label">{`${payload[0].payload.uv}Kcal`}</p>
+          </div>
+        );
+      }
+    }
+    
     return (
-      <ResponsiveContainer width="58%" height="32%">
+      <div className='Duree'>
+      <ResponsiveContainer width="100%" height="100%">
 
         <BarChart
           data={data}
@@ -90,12 +105,13 @@ export default class Example extends PureComponent {
           <XAxis tick={{ fill: '#9B9EAC' }} dataKey="name" stroke="#DEDEDE" />
           <YAxis yAxisId="left" orientation="right" stroke="#9B9EAC" axisLine={false} tickCount={3} />
           <YAxis yAxisId="right" orientation="right" stroke="#9B9EAC" display="none" />
-          <Tooltip />
+          <Tooltip contentStyle={{backgroundColor:"red"}} content={<CustomTooltip />}/>
           <Legend wrapperStyle={{ top: 25, right: 25 }} layout="horizontal" verticalAlign="top" align="right" iconSize="8px" formatter={(value, entry, index) => <span className="text-color-class">{value}</span>} payload={[{ type: "circle", value: "Poids (kg)", color: "#282D30" }, { type: "circle", value: "Calories brûlées (kCal)", color: "#E60000" }]} />
           <Bar yAxisId="left" dataKey="pv" fill="#282D30" radius={[10, 10, 0, 0]} barSize={7} maxBarSize={1}/>
           <Bar yAxisId="right" dataKey="uv" fill="#E60000" radius={[10, 10, 0, 0]} barSize={7} maxBarSize={1}/>
         </BarChart>
       </ResponsiveContainer>
+      </div>
     );
   }
 }

@@ -6,6 +6,7 @@ import Title from './Component/Title'
 import Duree from './Component/Duree'
 import Data from './Component/Data'
 import Activite from './Component/Activite'
+import Intensite from './Component/Intensite'
 import cal from './Assets/calories-icon.png'
 import carb from './Assets/carbs-icon.png'
 import protein from './Assets/protein-icon.png'
@@ -24,6 +25,8 @@ function App() {
       <Data logo={carb} number="1,930kCal" unit="Calories" />
       <Data logo={fat} number="1,930kCal" unit="Calories" />
       </div>
+      <Activite/>
+      <Intensite/>
     </div>
   );
 }

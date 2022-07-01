@@ -1,11 +1,12 @@
 
-.recharts-responsive-container{
+.Duree{
     position: absolute;
     top: 31vh;
     left: 226px;
     background-color: #FBFBFB; 
     border-radius: 5px;
-    color: #8884d8;
+    width: 58vw;
+    height: 32vh;
 }
 
 .recharts-bar-rectangle{
@@ -47,4 +48,17 @@
    color: #74798C;
    margin-left: 12px;
    font-size: 14px;
+ }
+
+ .custom-tooltip{
+   background-color:#E60000 ;
+   font-size: 7px;
+   color: white;
+   font-weight: 600;
+   height: 63px;
+   width: 39px;
+   display: flex;
+   justify-content: space-evenly;
+   flex-direction: column;
+   align-items: center;
  }
