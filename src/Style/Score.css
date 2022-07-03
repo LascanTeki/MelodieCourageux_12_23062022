@@ -1,0 +1,23 @@
+.right{
+    position: absolute;
+    top: 66vh;
+    left: 802px;
+    height: 25vh;
+    width: 17.9vw;
+    background-color: #FBFBFB;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: lighter;
+}
+
+.right text{
+    position: absolute;
+    display: flex;
+    z-index: 10;
+}
+
+.label-top {
+    transform: translateY(-10px);
+}

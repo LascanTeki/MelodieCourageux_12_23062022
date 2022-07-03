@@ -1,8 +1,8 @@
 import '../Style/Title.css';
 
-function title() {
+function title(props) {
 
-  let name = "Thomas"
+  let name = "Karl"
 
   return (
     <div className='title'>
