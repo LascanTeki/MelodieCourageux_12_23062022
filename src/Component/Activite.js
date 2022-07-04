@@ -60,7 +60,6 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/tiny-line-chart-r5z0f';
 
   render() {
     const CustomTooltip = ({ active, payload, label }) => {

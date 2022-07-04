@@ -10,9 +10,6 @@ let value
 let percent
 
 export default class Example extends PureComponent {
-    static demoUrl = 'https://codesandbox.io/s/two-simple-pie-chart-otx9h';
-
-    
 
     render() {
 
@@ -22,7 +19,7 @@ export default class Example extends PureComponent {
             { name: 'Group A', value: value },
         ];
 
-        percent = data[0].value+"%"
+        percent = value+"%"
 
         return (
             <div className='right'>
