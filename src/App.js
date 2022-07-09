@@ -13,76 +13,59 @@ import carb from './Assets/carbs-icon.png'
 import protein from './Assets/protein-icon.png'
 import fat from './Assets/fat-icon.png'
 
-
 import { useState, useEffect } from 'react';
+import { api } from './Component/API'
+
 
 
 function App() {
 
-  const [name, setName] = useState({
-    data: {
-
-      id: 12,
-      userInfos: {
-        firstName: '...',
-      },
-      todayScore: 0.12,
-      keyData: {
-        calorieCount: 0,
-        proteinCount: 0,
-        carbohydrateCount: 0,
-        lipidCount: 0
-      },
-    }
-  });
-
-  const [inte, setinte] = useState({
-    data: {"userId":12,"kind":{"1":"cardio","2":"energy","3":"endurance","4":"strength","5":"speed","6":"intensity"},"data":[{"value":80,"kind":1},{"value":120,"kind":2},{"value":140,"kind":3},{"value":50,"kind":4},{"value":200,"kind":5},{"value":90,"kind":6}]}
-  });
+  const [list, setName] = useState([]);
 
   useEffect(() => {
-    api();
-    Int()
-  })
+    api()
+      .then(response => response)
+      .then(data => setName(data));
+  }, [])
 
-  const api = async () => {
+  if (list[0] !== undefined) {
 
-    await fetch('http://localhost:3000/user/12')
-      .then(response => response.json())
-      .then(data => setName(data))
-      
-  }
+    let name = list[0]
+    let Dur = list[1]
+    let Act = list[2]
+    let inte = list[3]
 
-  let value = name.data.todayScore * 100
+    let value = name.data.todayScore * 100
+    let title = name
 
-  const Int = async () => {
+    let intensite = inte.data
+    
+    let Cal = name.data.keyData.calorieCount
+    let Protein = name.data.keyData.proteinCount
+    let Carb = name.data.keyData.carbohydrateCount
+    let Fat = name.data.keyData.lipidCount
 
-    await fetch('http://localhost:3000/user/12/performance')
-      .then(response => response.json())
-      .then(data => setinte(data))
-      
-  }
 
-  let intensite = inte.data
+    return (
+      <div className="App">
 
-  return (
-    <div className="App">
-
-      < Header />
-      <Sidebar />
-      <Title name={name.data.userInfos.firstName} />
-      <Duree />
-      <div className='datas'>
-        <Data logo={cal} number={name.data.keyData.calorieCount} unit="Calories" />
-        <Data logo={protein} number={name.data.keyData.proteinCount} unit="Proteines" />
-        <Data logo={carb} number={name.data.keyData.carbohydrateCount} unit="Glucides" />
-        <Data logo={fat} number={name.data.keyData.lipidCount} unit="Lipides" />
+        < Header />
+        <Sidebar />
+        <Title name={title} />
+        <Duree Duree={Dur} />
+        <div className='datas'>
+          <Data logo={cal} number={Cal} unit="Calories" />
+          <Data logo={protein} number={Protein} unit="Proteines" />
+          <Data logo={carb} number={Carb} unit="Glucides" />
+          <Data logo={fat} number={Fat} unit="Lipides" />
+        </div>
+        <Activite act={Act} />
+        <Intensite inte={intensite} />
+        <Score score={value} />
       </div>
-      <Activite />
-      <Intensite inte={intensite} />
-      <Score score={value} />
-    </div>
-  );
+    );
+  }
+  return ("...")
 }
 
 export default App;

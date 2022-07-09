@@ -41,5 +41,6 @@ export default class Example extends PureComponent {
                 </ResponsiveContainer>
             </div>
         );
+        
     }
 }
