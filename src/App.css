@@ -18,9 +18,20 @@ body{
     flex-direction: column;
     position: absolute;
     top: 31vh;
-    right:90px;
-    width: 17%;
+    right: 0;
+    width: calc(100vw - 226px - 58vw);
     height: calc(100vh - 31vh - 8vh);
     justify-content: space-between;
+    align-items: center;
 }
 
+.low{
+    display: flex;
+    position: absolute;
+    top: 66vh;
+    left: 226px;
+    border-radius: 5px;
+    width: 58vw;
+    height: 32vh;
+    justify-content: space-between;
+}

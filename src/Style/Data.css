@@ -1,6 +1,6 @@
 .data{
     display: flex;
-    width: 100%;
+    width: 70%;
     height: 12vh;
     align-items: center;
     justify-content: space-evenly;
@@ -22,3 +22,10 @@
     font-weight: 400;
     color: #74798C;
 }
+
+@media screen and (max-width: 1140px) {
+    .icon{
+        width: 40px;
+        height: 40px;
+    }
+  }

@@ -1,13 +1,11 @@
 .lower {
-   position: absolute;
-   top: 66vh;
-   left: 226px;
    height: 25vh;
    width: 17.9vw;
    background-color: #FF0000;
    border-radius: 5px;
    display: flex;
    align-items: flex-end;
+   position: relative;
 }
 
 .linetitle {

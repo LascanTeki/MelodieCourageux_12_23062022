@@ -16,8 +16,6 @@ import fat from './Assets/fat-icon.png'
 import { useState, useEffect } from 'react';
 import { api } from './Component/API'
 
-
-
 function App() {
 
   const [list, setName] = useState([]);
@@ -39,7 +37,7 @@ function App() {
     let title = name
 
     let intensite = inte.data
-    
+
     let Cal = name.data.keyData.calorieCount
     let Protein = name.data.keyData.proteinCount
     let Carb = name.data.keyData.carbohydrateCount
@@ -52,16 +50,20 @@ function App() {
         < Header />
         <Sidebar />
         <Title name={title} />
-        <Duree Duree={Dur} />
-        <div className='datas'>
-          <Data logo={cal} number={Cal} unit="Calories" />
-          <Data logo={protein} number={Protein} unit="Proteines" />
-          <Data logo={carb} number={Carb} unit="Glucides" />
-          <Data logo={fat} number={Fat} unit="Lipides" />
-        </div>
-        <Activite act={Act} />
-        <Intensite inte={intensite} />
-        <Score score={value} />
+          
+            <Activite act={Act} />
+            <div className='low'>
+              <Duree Duree={Dur} />
+              <Intensite inte={intensite} />
+              <Score score={value} />
+           
+          </div>
+          <div className='datas'>
+            <Data logo={cal} number={Cal} unit="Calories" />
+            <Data logo={protein} number={Protein} unit="Proteines" />
+            <Data logo={carb} number={Carb} unit="Glucides" />
+            <Data logo={fat} number={Fat} unit="Lipides" />
+          </div>
       </div>
     );
   }

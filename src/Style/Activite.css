@@ -8,11 +8,6 @@
     width: 58vw;
     height: 32vh;
 }
-
-.recharts-bar-rectangle{
-    border-radius: 10px;
-}
-
 .recharts-yAxis .recharts-text {
     transform: translate(50px, 0);
  }
@@ -27,9 +22,6 @@
  }
  .recharts-cartesian-axis-tick-line{
     display: none;
- }
- .recharts-rectangle {
-    width: 7px;
  }
 
  .recharts-legend-icon{

@@ -22,7 +22,7 @@ export default class Example extends PureComponent {
                     <ResponsiveContainer width="100%" height="90%">
                         <RadarChart cx="50%" cy="50%" outerRadius="70%" data={value} padding={25} startAngle={210}  endAngle={570}>
                             <PolarGrid radialLines={false} polarRadius={[5, 15, 30, 45, 65]} />
-                            <PolarAngleAxis dataKey="kind" tick={{ fontSize: 12, fill: "white" }} />
+                            <PolarAngleAxis dataKey="kind" tick={{ fontSize: "0.8vw", fill: "white" }} />
                             <Radar name="Mike" dataKey="value" stroke="#FF0101B2" fill="#FF0101B2" fillOpacity={0.7}  />
                         </RadarChart>
                     </ResponsiveContainer>
