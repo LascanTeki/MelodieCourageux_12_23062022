@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { LineChart, Line, Tooltip, ResponsiveContainer } from 'recharts';
 import '../Style/Duree.css';
+import PropTypes from 'prop-types';
 
 let data
 
@@ -51,3 +52,7 @@ export default class Example extends PureComponent {
     
   }
 }
+
+Example.propTypes = {
+  data: PropTypes.array,
+};

@@ -1,5 +1,7 @@
 import '../Style/Title.css';
 
+import PropTypes from 'prop-types';
+
 function title(props) {
 
     let name = props.name.data.userInfos.firstName
@@ -11,5 +13,9 @@ function title(props) {
     );
   ;
 }
+
+title.propTypes = {
+  name: PropTypes.object,
+};
 
 export default title;

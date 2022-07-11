@@ -2,24 +2,19 @@ import React, { PureComponent } from 'react';
 import { PieChart, Pie,  Label, ResponsiveContainer } from 'recharts';
 import '../Style/Score.css';
 
-
-let data
-
-let value
-
-let percent
+import PropTypes from 'prop-types';
 
 export default class Example extends PureComponent {
 
     render() {
 
-        value = this.props.score
+        let value = this.props.score
 
-        data = [
+        let data = [
             { name: 'Group A', value: value },
         ];
 
-        percent = value+"%"
+        let percent = value+"%"
 
         return (
             <div className='right'>
@@ -44,3 +39,7 @@ export default class Example extends PureComponent {
         
     }
 }
+
+Example.propTypes = {
+    score: PropTypes.number
+  };

@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 import '../Style/Intensite.css';
 
-
+import PropTypes from 'prop-types';
 
 
 export default class Example extends PureComponent {
@@ -31,3 +31,7 @@ export default class Example extends PureComponent {
         
     }
 }
+
+Example.propTypes = {
+    inte: PropTypes.object,
+  };

@@ -1,5 +1,7 @@
 import '../Style/Data.css';
 
+import PropTypes from 'prop-types';
+
 function data(prop) {
 
 
@@ -21,5 +23,11 @@ function data(prop) {
     }
 
 }
+
+data.propTypes = {
+  logo: PropTypes.string,
+  unit: PropTypes.string,
+  number: PropTypes.number
+};
 
 export default data;
