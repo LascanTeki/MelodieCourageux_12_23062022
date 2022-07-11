@@ -1,5 +1,6 @@
 
 import './App.css';
+
 import Header from './Component/Header'
 import Sidebar from './Component/Sidebar'
 import Title from './Component/Title'
@@ -8,18 +9,23 @@ import Data from './Component/Data'
 import Activite from './Component/Activite'
 import Intensite from './Component/Intensite'
 import Score from './Component/Score'
+
+import { api } from './Component/API'
+
+//imports the images for tha data
 import cal from './Assets/calories-icon.png'
 import carb from './Assets/carbs-icon.png'
 import protein from './Assets/protein-icon.png'
 import fat from './Assets/fat-icon.png'
 
 import { useState, useEffect } from 'react';
-import { api } from './Component/API'
+
 
 function App() {
 
   const [list, setName] = useState([]);
 
+  //Fetches the informations from the API, using the coponent "API", and stores it in a Usestate
   useEffect(() => {
     api()
       .then(response => response)
@@ -50,20 +56,21 @@ function App() {
         < Header />
         <Sidebar />
         <Title name={title} />
-          
-            <Activite act={Act} />
-            <div className='low'>
-              <Duree Duree={Dur} />
-              <Intensite inte={intensite} />
-              <Score score={value} />
-           
-          </div>
-          <div className='datas'>
-            <Data logo={cal} number={Cal} unit="Calories" />
-            <Data logo={protein} number={Protein} unit="Proteines" />
-            <Data logo={carb} number={Carb} unit="Glucides" />
-            <Data logo={fat} number={Fat} unit="Lipides" />
-          </div>
+
+        <Activite act={Act} />
+
+        <div className='low'>
+          <Duree Duree={Dur} />
+          <Intensite inte={intensite} />
+          <Score score={value} />
+        </div>
+
+        <div className='datas'>
+          <Data logo={cal} number={Cal} unit="Calories" />
+          <Data logo={protein} number={Protein} unit="Proteines" />
+          <Data logo={carb} number={Carb} unit="Glucides" />
+          <Data logo={fat} number={Fat} unit="Lipides" />
+        </div>
       </div>
     );
   }
