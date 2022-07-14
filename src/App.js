@@ -28,9 +28,10 @@ function App() {
 
   const [list, setName] = useState([]);
 
+
   //Fetches the informations from the API, using the coponent "API", and stores it in a Usestate
   useEffect(() => {
-    api(18)
+    api(12)
       .then(response => response)
       .then(data => setName(data));
   }, [])
@@ -42,7 +43,15 @@ function App() {
     let act = list[2]
     let inte = list[3]
 
-    let value = name.data.todayScore * 100
+    //the score value name isn't the same on the 2 ids
+    let value
+    if (name.data.id===18) {
+      value = name.data.score * 100
+    }
+    else{
+      value = name.data.todayScore * 100
+    }
+
     let title = name
 
     let intensite = inte.data
