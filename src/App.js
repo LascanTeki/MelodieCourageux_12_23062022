@@ -20,14 +20,17 @@ import fat from './Assets/fat-icon.png'
 
 import { useState, useEffect } from 'react';
 
-
+/**
+ * Main function building the page together with it's components
+ * @returns html
+ */
 function App() {
 
   const [list, setName] = useState([]);
 
   //Fetches the informations from the API, using the coponent "API", and stores it in a Usestate
   useEffect(() => {
-    api()
+    api(18)
       .then(response => response)
       .then(data => setName(data));
   }, [])
@@ -35,8 +38,8 @@ function App() {
   if (list[0] !== undefined) {
 
     let name = list[0]
-    let Dur = list[1]
-    let Act = list[2]
+    let dur = list[1]
+    let act = list[2]
     let inte = list[3]
 
     let value = name.data.todayScore * 100
@@ -57,10 +60,10 @@ function App() {
         <Sidebar />
         <Title name={title} />
 
-        <Activite act={Act} />
+        <Activite act={act} />
 
         <div className='low'>
-          <Duree Duree={Dur} />
+          <Duree Duree={dur} />
           <Intensite inte={intensite} />
           <Score score={value} />
         </div>

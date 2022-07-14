@@ -5,7 +5,12 @@ import '../Style/Score.css';
 import PropTypes from 'prop-types';
 
 export default class Example extends PureComponent {
-
+    /**
+     * Component for generating a chart with the score of the user.
+     * @param {*} props 
+     * @component
+     * @extends {PureComponent}
+     */
     render() {
 
         let value = this.props.score

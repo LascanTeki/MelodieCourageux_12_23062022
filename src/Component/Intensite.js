@@ -5,8 +5,14 @@ import '../Style/Intensite.css';
 import PropTypes from 'prop-types';
 
 
-export default class Example extends PureComponent {
 
+export default class Example extends PureComponent {
+/**
+ * Component for generating a chart with the scores of every activity type.
+ * @param {*} props 
+ * @component
+ * @extends {PureComponent}
+ */
     render() {
 
         //Changes the value of "kind" (numbers) to the corresponding kind of value in the "inte" table

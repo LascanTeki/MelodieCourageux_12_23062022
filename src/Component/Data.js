@@ -2,6 +2,12 @@ import '../Style/Data.css';
 
 import PropTypes from 'prop-types';
 
+/**
+ * Component for generating the side data on the consomation of the user.
+ * @component
+ * @param {*} prop 
+ */
+
 function data(prop) {
 
 

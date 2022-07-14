@@ -2,7 +2,12 @@ import '../Style/Activite.css';
 import React, { PureComponent } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-
+/**
+  * Component for generating a chart with activity of the user.
+  * @param {*} props 
+  * @component
+  * @extends {PureComponent}
+ */
 export default class Example extends PureComponent {
 
   render() {

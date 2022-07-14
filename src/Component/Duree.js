@@ -3,14 +3,17 @@ import { LineChart, Line, Tooltip, ResponsiveContainer } from 'recharts';
 import '../Style/Duree.css';
 import PropTypes from 'prop-types';
 
-let data
 
 export default class Example extends PureComponent {
-
+/**
+ * Component for generating a chart with the average session duration.
+ * @param {*} props 
+ * @component
+ * @extends {PureComponent}
+ */
   render() {
 
-
-    data = this.props.Duree.data.sessions
+    let data = this.props.Duree.data.sessions
 
     const CustomTooltip = ({ active, payload }) => {
       if (active && payload && payload.length) {

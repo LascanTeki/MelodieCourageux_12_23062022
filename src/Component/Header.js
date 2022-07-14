@@ -1,6 +1,10 @@
 import '../Style/Header.css';
 import logo from '../Assets/logo.png'
 
+/**
+ Component for generating the header.
+ * @component
+ */
 function header() {
   return (
     <header>

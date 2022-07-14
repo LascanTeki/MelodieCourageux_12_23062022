@@ -1,7 +1,11 @@
 import '../Style/Title.css';
 
 import PropTypes from 'prop-types';
-
+/**
+ Component for generating the welcoming message.
+ * @component
+ * @param {*} props 
+ */
 function title(props) {
 
     let name = props.name.data.userInfos.firstName

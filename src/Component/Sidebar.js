@@ -3,8 +3,12 @@ import Bike from '../Assets/Bike.png'
 import Lifting from '../Assets/Lifting.png'
 import Medi from '../Assets/Medi.png'
 import Swim from '../Assets/Swim.png'
-
-function sidebar() {
+/**
+ * Component for generating the sidebar.
+ * @component
+ */
+function Sidebar() {
+  
   return (
     <div className='side'>
       <div className="icons">
@@ -18,4 +22,4 @@ function sidebar() {
   );
 }
 
-export default sidebar;
+export default Sidebar;
