@@ -10,7 +10,7 @@ import Activite from './Component/Activite'
 import Intensite from './Component/Intensite'
 import Score from './Component/Score'
 
-import { api } from './Component/API'
+import { Api } from './Component/API'
 
 //imports the images for tha data
 import cal from './Assets/calories-icon.png'
@@ -31,7 +31,7 @@ function App() {
 
   //Fetches the informations from the API, using the coponent "API", and stores it in a Usestate
   useEffect(() => {
-    api(12)
+    Api(12)
       .then(response => response)
       .then(data => setName(data));
   }, [])
@@ -39,27 +39,27 @@ function App() {
   if (list[0] !== undefined) {
 
     let name = list[0]
-    let dur = list[1]
-    let act = list[2]
-    let inte = list[3]
+    let duree = list[1]
+    let activitee = list[2]
+    let intensitee = list[3]
+
+
+    let value
 
     //the score value name isn't the same on the 2 ids
-    let value
-    if (name.data.id===18) {
+    if (name.data.id === 18) {
       value = name.data.score * 100
     }
-    else{
+    else {
       value = name.data.todayScore * 100
     }
 
-    let title = name
+    let intensite = intensitee.data
 
-    let intensite = inte.data
-
-    let Cal = name.data.keyData.calorieCount
-    let Protein = name.data.keyData.proteinCount
-    let Carb = name.data.keyData.carbohydrateCount
-    let Fat = name.data.keyData.lipidCount
+    let calories = name.data.keyData.calorieCount
+    let proteins = name.data.keyData.proteinCount
+    let carbs = name.data.keyData.carbohydrateCount
+    let fats = name.data.keyData.lipidCount
 
 
     return (
@@ -67,21 +67,21 @@ function App() {
 
         < Header />
         <Sidebar />
-        <Title name={title} />
+        <Title name={name} />
 
-        <Activite act={act} />
+        <Activite act={activitee} />
 
         <div className='low'>
-          <Duree Duree={dur} />
+          <Duree Duree={duree} />
           <Intensite inte={intensite} />
           <Score score={value} />
         </div>
 
         <div className='datas'>
-          <Data logo={cal} number={Cal} unit="Calories" />
-          <Data logo={protein} number={Protein} unit="Proteines" />
-          <Data logo={carb} number={Carb} unit="Glucides" />
-          <Data logo={fat} number={Fat} unit="Lipides" />
+          <Data logo={cal} number={calories} unit="Calories" />
+          <Data logo={protein} number={proteins} unit="Proteines" />
+          <Data logo={carb} number={carbs} unit="Glucides" />
+          <Data logo={fat} number={fats} unit="Lipides" />
         </div>
       </div>
     );

@@ -6,19 +6,19 @@ import PropTypes from 'prop-types';
  * @param {number} id 
  */
 
-export async function api(id) {
+export async function Api(id) {
 
   let response = await fetch(`http://localhost:3000/user/${id}`)
   response = await response.json()
-  let dure = await fetch(`http://localhost:3000/user/${id}/average-sessions`)
-  dure = await dure.json()
-  let activ = await fetch(`http://localhost:3000/user/${id}/activity`)
-  activ = await activ.json()
-  let int = await fetch(`http://localhost:3000/user/${id}/performance`)
-  int = await int.json()
-  return ([response, dure, activ, int])
+  let duree = await fetch(`http://localhost:3000/user/${id}/average-sessions`)
+  duree = await duree.json()
+  let activitee = await fetch(`http://localhost:3000/user/${id}/activity`)
+  activitee = await activitee.json()
+  let intensite = await fetch(`http://localhost:3000/user/${id}/performance`)
+  intensite = await intensite.json()
+  return ([response, duree, activitee, intensite])
 }
 
-api.propTypes = {
+Api.propTypes = {
   id: PropTypes.number,
 };
