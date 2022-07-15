@@ -19,7 +19,8 @@ Permettre à l’utilisateur de suivre le nombre de sessions réalisées ainsi q
 ## Licensing
 
 This project was built under the Creative Commons licence.
-This project was created for Open Classroom
+
+This project was created for Open Classroom.
 
 ## How to Install
 
