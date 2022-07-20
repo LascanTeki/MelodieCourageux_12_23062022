@@ -11,6 +11,7 @@ import Intensite from './Component/Intensite'
 import Score from './Component/Score'
 
 import { Api } from './Component/API'
+import Mock from './Component/Mock'
 
 //imports the images for tha data
 import cal from './Assets/calories-icon.png'
@@ -29,11 +30,16 @@ function App() {
   const [list, setName] = useState([]);
 
 
-  //Fetches the informations from the API, using the coponent "API", and stores it in a Usestate
-  useEffect(() => {
-    Api(12)
+  //Fetches the informations from the API, using the coponent "API", and stores it in a Usestate, remove comment for API
+  /*useEffect(() => {
+    Api(18)
       .then(response => response)
       .then(data => setName(data));
+  }, [])*/
+
+  //mocked content, add comment for API
+  useEffect(() => {
+    setName(Mock())
   }, [])
 
   if (list[0] !== undefined) {
@@ -42,7 +48,6 @@ function App() {
     let duree = list[1]
     let activitee = list[2]
     let intensitee = list[3]
-
 
     let value
 

@@ -9,13 +9,11 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
   * @extends {PureComponent}
  */
 export default class Example extends PureComponent {
-
+  
   render() {
-
     //Changes day to the last caracters in itself, corresponding to the day instead of the full date
     let dat = this.props.act.data.sessions.map((perf) => {
       return {
-        day: perf.day.slice(-1),
         kilogram: perf.kilogram,
         calories: perf.calories,
       }
